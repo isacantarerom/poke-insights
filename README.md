@@ -94,13 +94,13 @@ pokeinsights/
 
 Each phase introduces a new architectural concept. Build them in order.
 
-### ✅ Phase 1 — Project Scaffolding & Docker
+### ✅ Phase 1 — Project setup & Docker
 **Goal:** Get both services running in containers, communicating with nothing yet.
-- Set up folder structure and git repo
-- Write minimal FastAPI "hello world" in Service A
-- Write minimal Express "hello world" in Service B
-- Write `docker-compose.yml` to run both
-- Add RabbitMQ container (management UI at `localhost:15672`)
+[x] Set up folder structure and git repo
+[x] Create virtual environment
+[x] Add virtual enviornment to the .gitignore
+[x] Implement `GET /health` endpoint
+
 
 **Key concepts:** Docker basics, docker-compose networking, service discovery by hostname
 
@@ -108,11 +108,10 @@ Each phase introduces a new architectural concept. Build them in order.
 
 ### ✅ Phase 2 — Service A Fetches from PokéAPI
 **Goal:** Service A can call an external API and return structured data.
-- Implement `GET /health` endpoint
-- Implement `POST /collect?pokemon=pikachu`
-- Call PokéAPI and extract: name, types, base stats (hp, attack, defense, speed)
-- Calculate a simple `battle_power = (attack + defense + speed) * (hp / 100)`
-- Return enriched JSON response
+[x] Implement `POST /collect?pokemon=name`
+[x] Call PokéAPI and extract: name, types, base stats (hp, attack, defense, speed)
+[x] Calculate a simple `battle_power = (attack + defense + speed) * (hp / 100)`
+[x] Return enriched JSON response
 
 **Key concepts:** HTTP clients (`httpx` in Python), async/await, Pydantic models, error handling for 404s
 
