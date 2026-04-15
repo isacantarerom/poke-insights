@@ -119,10 +119,8 @@ Each phase introduces a new architectural concept. Build them in order.
 
 ### ✅ Phase 3 — Service A Publishes to RabbitMQ
 **Goal:** After fetching data, push it onto a queue instead of just returning it.
-- Add RabbitMQ connection using `pika` library
-- After enriching data, publish a JSON message to a queue named `pokemon.collected`
-- Handle connection failures gracefully (retry logic)
-- Confirm publish with acknowledgement
+[x] Add RabbitMQ connection using `pika` library
+[x] After enriching data, publish a JSON message to a queue named `pokemon.collected`
 
 **Key concepts:** Message queues, producer pattern, connection pooling, message serialisation
 
