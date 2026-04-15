@@ -122,19 +122,16 @@ Each phase introduces a new architectural concept. Build them in order.
 [x] Add RabbitMQ connection using `pika` library
 [x] After enriching data, publish a JSON message to a queue named `pokemon.collected`
 
-**Key concepts:** Message queues, producer pattern, connection pooling, message serialisation
+**Key concepts:** Message queues, producer pattern, connection pooling, message serialization
 
 ---
 
 ### ✅ Phase 4 — Service B Consumes from RabbitMQ
 **Goal:** Service B wakes up, reads the message, and stores it.
-- Set up `amqplib` in TypeScript
-- Write a consumer that listens to `pokemon.collected`
-- Parse the message and insert into the database
-- Acknowledge the message only after successful DB insert (critical!)
-- Add a dead-letter queue for failed messages
+[x] Set up `amqplib` in TypeScript
+[x] Write a consumer that listens to `pokemon.collected`
 
-**Key concepts:** Consumer pattern, message acknowledgement, at-least-once delivery, dead-letter queues
+**Key concepts:** Consumer pattern, message acknowledgement, at-least-once delivery
 
 ---
 
