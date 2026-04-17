@@ -137,9 +137,8 @@ Each phase introduces a new architectural concept. Build them in order.
 
 ### ✅ Phase 5 — Service B Exposes Query Endpoints
 **Goal:** Clients can query processed Pokémon data.
-- `GET /health` — basic health check
-- `GET /pokemon/:name` — return stored stats for a Pokémon
-- `GET /leaderboard` — top 10 Pokémon by `battle_power`, sorted descending
+[x] `GET /pokemon/:name` — return stored stats for a Pokémon
+[x] `GET /leaderboard` — top 10 Pokémon by `battle_power`, sorted descending
 - Add basic input validation
 
 **Key concepts:** REST design, query patterns, response shaping
